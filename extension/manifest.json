@@ -1,0 +1,27 @@
+{
+  "name": "AI Autocomplete",
+  "description": "AI Autocomplete",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "https://aiautocomplete.up.railway.app/",
+    "http://localhost:8080/"
+  ],
+  "action": {
+    "default_popup": "src/index.html",
+    "default_icon": "icon.png"
+  },
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/index.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["src/popup.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
