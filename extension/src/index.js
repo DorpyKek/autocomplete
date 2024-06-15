@@ -1,7 +1,7 @@
 document.addEventListener("focusin", handleFocusIn);
 
 // If you've hosted the server, update the url below
-const API_URL = "http://localhost:8080";
+const API_URL = "autocomplete-production-1ea8.up.railway.app";
 
 function handleFocusIn(event) {
   if (event.target.dataset.inputListenerAdded) {
